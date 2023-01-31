@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.main-heading-ps {
+  text-align: center;
+}
+
+.container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-buttons {
+  padding: 10px 0px;
+  text-align: center;
+  width: 25%;
+  max-width: 25%;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 8px;
+}
+
+.nav-buttons:hover {
+  background-color: purple;
+  cursor: pointer;
+}
+
+.message-board {
+  width: 600px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.message-display {
+  margin: 10px 5px;
+  display: block;
+  max-width: 350px;
+  background-color: rgba(148, 105, 158, 0.397);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.username-message-display {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(44, 7, 146);
+}
+
+.message-text-content {
+  display: inline;
+  color: rgb(160, 17, 160);
+}
+
+.message-time-display {
+  display: block;
+  color: rgb(129, 129, 129);
+}
+
+.message-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.username-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-area {
+  width: 150px;
+  margin: 5px 10px;
+}
+
+.send-buttons {
+  width: 70px;
+}
