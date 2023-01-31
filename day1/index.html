@@ -6,33 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./assets/style.css" />
-    <!-- <link rel="stylesheet" href="./assets/responsive.css" /> -->
+    <link rel="stylesheet" href="./assets/responsive.css" />
 
     <title>It bootcamp Chat</title>
   </head>
   <body>
     <h1 class="main-heading">IT Bootcamp Chat</h1>
-    <h4 class="main-heading-ps">Choose a chatroom</h4>
 
-    <div class="container">
-      <nav class="nav-bar row">
-        <div class="nav-buttons col-3" id="general">#General</div>
-        <div class="nav-buttons col-3" id="js">#js</div>
-        <div class="nav-buttons col-3" id="homeworks">#homework</div>
-        <div class="nav-buttons col-3" id="tests">#tests</div>
-      </nav>
+    <div class="container row">
+      <div class="responsive-navbar" id="show-in-responsive">
+        <h4 class="main-heading-ps">Choose a chatroom</h4>
+        <nav class="nav-bar row visable" id="navbar">
+          <div class="nav-buttons col-3" id="general">#General</div>
+          <div class="nav-buttons col-3" id="js">#js</div>
+          <div class="nav-buttons col-3" id="homeworks">#homework</div>
+          <div class="nav-buttons col-3" id="tests">#tests</div>
+        </nav>
+      </div>
 
-      <div class="message-board">
+      <div class="message-board row">
         <div class="message-display col-9">
           <span class="username-message-display">annonimus : </span>
           <p class="message-text-content">Hello :)</p>
           <span class="message-time-display">17.09.2020 - 15:29</span>
         </div>
-        <span class="col-3">&nbsp</span>
+        <span class="col-3 empty">&nbsp</span>
       </div>
 
       <div class="message-input-container row">
-        <span class="col-2">&nbsp</span>
+        <span class="col-2 empty">&nbsp</span>
         <input
           class="input-area col-4"
           type="text"
@@ -40,11 +42,11 @@
           placeholder="Your message"
         />
         <input class="send-buttons col-4" type="submit" value="Send" />
-        <span class="col-2">&nbsp</span>
+        <span class="col-2 empty">&nbsp</span>
       </div>
 
       <div class="username-input-container row">
-        <span class="col-2">&nbsp</span>
+        <span class="col-2 empty">&nbsp</span>
         <input
           class="input-area col-4"
           type="text"
@@ -52,7 +54,7 @@
           placeholder="Update username"
         />
         <input class="send-buttons col-4" type="submit" value="Update" />
-        <span class="col-2">&nbsp</span>
+        <span class="col-2 empty">&nbsp</span>
       </div>
     </div>
 

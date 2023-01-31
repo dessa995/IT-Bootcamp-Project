@@ -18,7 +18,8 @@
   margin-right: auto;
 }
 
-.nav-bar {
+.nav-bar,
+.visable {
   display: flex;
   gap: 5px;
 }
@@ -28,26 +29,27 @@
   text-align: center;
   width: 25%;
   max-width: 25%;
-  background-color: blueviolet;
-  color: white;
+  background-color: #8a2be2;
+  color: #ffffff;
   border-radius: 8px;
 }
 
 .nav-buttons:hover {
-  background-color: purple;
+  background-color: #800080;
   cursor: pointer;
 }
 
 .message-board {
   width: 600px;
+  max-height: 400px;
   overflow: hidden;
-  height: 400px;
+  overflow-y: scroll;
 }
 
 .message-display {
   margin: 10px 5px;
   display: block;
-  max-width: 350px;
+  /* max-width: 350px; */
   background-color: rgba(148, 105, 158, 0.397);
   border-radius: 10px;
   padding: 10px;
@@ -82,10 +84,23 @@
 }
 
 .input-area {
-  width: 150px;
   margin: 5px 10px;
+  font-size: 15px;
+  padding: 4px 0px;
+  border: 1px #000000 solid;
+}
+
+.input-area:focus {
+  outline: 2px #800080 solid;
+  border: 1px #800080 solid;
 }
 
 .send-buttons {
-  width: 70px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 0px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8a2be2;
+  color: #ffffff;
 }
