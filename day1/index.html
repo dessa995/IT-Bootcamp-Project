@@ -24,18 +24,11 @@
         </nav>
       </div>
 
-      <div class="message-board row">
+      <section class="message-board row">
         <ul id="message-board-ul" class="row">
-          <div class="row">
-            <li class="message-display col-9">
-              <span class="username-message-display">annonimus : </span>
-              <p class="message-text-content">Hello :)</p>
-              <span class="message-time-display">17.09.2020 - 15:29</span>
-            </li>
-            <span class="col-3 empty">&nbsp</span>
-          </div>
+          <!-- sadrzaj poruka ovde -->
         </ul>
-      </div>
+      </section>
 
       <div class="message-input-container row">
         <span class="col-2 empty">&nbsp</span>
@@ -45,7 +38,12 @@
           id="message-input"
           placeholder="Your message"
         />
-        <input class="send-buttons col-4" type="submit" value="Send" />
+        <input
+          class="send-buttons col-4"
+          id="message-send-btn"
+          type="submit"
+          value="Send"
+        />
         <span class="col-2 empty">&nbsp</span>
       </div>
 
@@ -57,7 +55,12 @@
           id="username-input"
           placeholder="Update username"
         />
-        <input class="send-buttons col-4" type="submit" value="Update" />
+        <input
+          class="send-buttons col-4"
+          id="username-update-btn"
+          type="submit"
+          value="Update"
+        />
         <span class="col-2 empty">&nbsp</span>
       </div>
     </div>

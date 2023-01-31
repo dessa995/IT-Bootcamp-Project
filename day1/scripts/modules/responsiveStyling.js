@@ -1,5 +1,3 @@
-console.log(window.innerWidth);
-
 let responsiveAccordian = function () {
   let responsiveClick = document.querySelector(".main-heading-ps");
   let navbar = document.getElementById("navbar");
