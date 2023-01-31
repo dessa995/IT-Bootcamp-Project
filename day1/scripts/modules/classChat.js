@@ -61,34 +61,18 @@ class Chatroom {
     return response;
   }
 
+  //pracenje poruka u bazi i ispis dodatih poruka
+
   getChats(callback) {
-    this.chats.orderBy("createdAt", "asc").onSnapshot((snapshot) => {
-      let changes = snapshot.docChanges();
-      changes.forEach((change) => {
-        let type = change.type;
-        let doc = change.doc;
-        if (type == "added") {
-          let chat = doc.data();
-          console.log("There has been a change in database");
-          console.log(chat);
-        } else if (type == "removed") {
-          // radice nesto kasnije
+    this.chats.onSnapshot((snapshot) => {
+      snapshot.docChanges().forEach((change) => {
+        if (change.type == "added") {
+          // console.log(change.doc.data());
+          callback(change.doc.data());
         }
       });
     });
   }
 }
 
-let chatroom1 = new Chatroom("#js", "Stefan");
-console.log(chatroom1.username, chatroom1.room);
-// let chatroom2 = new Chatroom("#js", "Ste fan");
-// console.log(chatroom2.username, chatroom2.room);
-// let chatroom3 = new Chatroom("#general", "Djordje");
-// chatroom3
-//   .addChat("Pozdravite vasu mamu")
-//   .then(() => {
-//     console.log("successfully added chat");
-//   })
-//   .catch((e) => {
-//     console.log("An error occured " + e);
-//   });
+export { Chatroom };

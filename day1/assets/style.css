@@ -58,17 +58,17 @@
 .username-message-display {
   font-size: 18px;
   font-weight: bold;
-  color: rgb(44, 7, 146);
+  color: #2c0792;
 }
 
 .message-text-content {
   display: inline;
-  color: rgb(160, 17, 160);
+  color: #a011a0;
 }
 
 .message-time-display {
   display: block;
-  color: rgb(129, 129, 129);
+  color: #818181;
 }
 
 .message-input-container {

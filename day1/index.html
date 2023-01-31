@@ -25,12 +25,16 @@
       </div>
 
       <div class="message-board row">
-        <div class="message-display col-9">
-          <span class="username-message-display">annonimus : </span>
-          <p class="message-text-content">Hello :)</p>
-          <span class="message-time-display">17.09.2020 - 15:29</span>
-        </div>
-        <span class="col-3 empty">&nbsp</span>
+        <ul id="message-board-ul" class="row">
+          <div class="row">
+            <li class="message-display col-9">
+              <span class="username-message-display">annonimus : </span>
+              <p class="message-text-content">Hello :)</p>
+              <span class="message-time-display">17.09.2020 - 15:29</span>
+            </li>
+            <span class="col-3 empty">&nbsp</span>
+          </div>
+        </ul>
       </div>
 
       <div class="message-input-container row">
@@ -77,8 +81,6 @@
       let db = firebase.firestore();
     </script>
 
-    <script src="scripts/modules/classChat.js"></script>
-
-    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/app.js"></script>
   </body>
 </html>
