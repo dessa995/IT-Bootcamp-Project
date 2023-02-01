@@ -31,6 +31,8 @@ class ChatUI {
   }
 
   formTime(data) {
+    let timeNow = new Date();
+    let timeNowDay = timeNow.getDate();
     let date = data.createdAt.toDate();
     let d = date.getDate();
     let m = date.getMonth() + 1;
@@ -43,8 +45,13 @@ class ChatUI {
     h = String(h).padStart(2, "0");
     min = String(min).padStart(2, "0");
 
-    let time = `${d}.${m}.${y}. - ${h}:${min}`;
-    return time;
+    if (timeNowDay == d) {
+      let time = `${h}:${min}`;
+      return time;
+    } else {
+      let time = `${d}.${m}.${y}. - ${h}:${min}`;
+      return time;
+    }
   }
 }
 

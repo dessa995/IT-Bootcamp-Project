@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url("../images/v960-ning-31.jpg"); */
+  background-image: url("../images/white-painted-wall-texture-background.jpg");
+  background-size: cover;
+}
+
+.main-heading {
+  text-align: center;
+  /* color: #a011a0; */
+  color: #1176d4;
+}
+
+.main-heading-ps {
+  text-align: center;
+  /* color: #800080; */
+  color: #015db4;
+}
+
+.container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  padding-left: 5px;
+}
+
+.nav-bar,
+.visable {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-buttons {
+  padding: 10px 0px;
+  text-align: center;
+  width: 25%;
+  max-width: 25%;
+  /* background-color: #8a2be2; */
+  background-color: #157aff;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.nav-buttons:hover {
+  /* background-color: #800080; */
+  background-color: #005de7;
+  cursor: pointer;
+}
+
+.message-board {
+  padding: 10px 5px;
+  width: 600px;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.message-display {
+  margin: 0px 5px;
+  display: block;
+  /* max-width: 350px; */
+  /* background-color: #94699e65; */
+  background-color: #087be765;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.username-message-display {
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #430792; */
+  color: #100792;
+}
+
+.message-text-content {
+  display: inline;
+  /* color: #a011a0; */
+  color: #ecf4fc;
+  font-size: 18px;
+}
+
+.message-time-display {
+  display: block;
+  color: #818181;
+}
+
+.message-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.username-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-area {
+  margin: 5px 10px;
+  font-size: 15px;
+  padding: 4px 0px;
+  border: 1px #000000 solid;
+  opacity: 0.6;
+}
+
+.input-area:focus {
+  /* outline: 2px #800080 solid;
+  border: 1px #800080 solid; */
+  outline: 2px #157aff solid;
+  border: 1px #157aff solid;
+}
+
+.send-buttons {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 0px;
+  border: none;
+  border-radius: 5px;
+  /* background-color: #8a2be2; */
+  background-color: #157aff;
+  color: #ffffff;
+}

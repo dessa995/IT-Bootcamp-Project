@@ -34,7 +34,7 @@ class Chatroom {
         this._username = "Anonymous";
       }
     } else {
-      alert("Username is not valid");
+      // alert("Username is not valid");
       this._username = "Anonymous";
     }
   }
