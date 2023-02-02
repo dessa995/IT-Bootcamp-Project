@@ -27,19 +27,16 @@
 
 body {
   background-image: url("../images/white-painted-wall-texture-background.jpg");
-  /* background-image: url("../images/v960-ning-31.jpg"); */
   background-size: cover;
 }
 
 .main-heading {
   text-align: center;
-  /* color: #a011a0; */
   color: #1176d4;
 }
 
 .main-heading-ps {
   text-align: center;
-  /* color: #800080; */
   color: #015db4;
 }
 
@@ -47,24 +44,14 @@ body {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding-right: 20px;
   padding-left: 5px;
 }
 
 .nav-bar {
   display: flex;
   gap: 5px;
-}
-.visable {
-  animation: slideDown 500ms ease-in forwards;
-  visibility: visible;
-  /* transition: max-height 1000mx ease; */
-}
-
-.invisable {
-  visibility: hidden;
-  max-height: 0px;
-  animation: slideUp 1000ms ease-out backwards;
+  padding: 5px;
 }
 
 .nav-buttons {
@@ -72,14 +59,12 @@ body {
   text-align: center;
   width: 25%;
   max-width: 25%;
-  /* background-color: #8a2be2; */
   background-color: #157aff;
   color: #ffffff;
   border-radius: 8px;
 }
 
 .nav-buttons:hover {
-  /* background-color: #800080; */
   background-color: #005de7;
   cursor: pointer;
 }
@@ -95,8 +80,6 @@ body {
 .message-display {
   margin: 0px 5px;
   display: block;
-  /* max-width: 350px; */
-  /* background-color: #94699e65; */
   background-color: #087be765;
   border-radius: 10px;
   padding: 10px;
@@ -105,13 +88,10 @@ body {
 .username-message-display {
   font-size: 18px;
   font-weight: bold;
-  /* color: #430792; */
   color: #100792;
 }
 
 .message-text-content {
-  display: inline;
-  /* color: #a011a0; */
   color: #ecf4fc;
   font-size: 18px;
 }
@@ -142,8 +122,6 @@ body {
 }
 
 .input-area:focus {
-  /* outline: 2px #800080 solid;
-  border: 1px #800080 solid; */
   outline: 2px #157aff solid;
   border: 1px #157aff solid;
 }
@@ -154,7 +132,11 @@ body {
   padding: 5px 0px;
   border: none;
   border-radius: 5px;
-  /* background-color: #8a2be2; */
   background-color: #157aff;
   color: #ffffff;
+}
+
+.send-buttons:hover {
+  cursor: pointer;
+  background-color: #005de7;
 }

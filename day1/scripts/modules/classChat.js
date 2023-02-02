@@ -26,15 +26,19 @@ class Chatroom {
   }
 
   set username(u) {
-    if (u.length > 1 && u.length < 11) {
-      if (u.includes(" ") == false) {
-        this._username = u;
+    if (u == true) {
+      if (u.length > 1 && u.length < 11) {
+        if (u.includes(" ") == false) {
+          this._username = u;
+        } else {
+          alert("Username is not valid");
+          this._username = "Anonymous";
+        }
       } else {
-        alert("Username is not valid");
+        // alert("Username is not valid");
         this._username = "Anonymous";
       }
     } else {
-      // alert("Username is not valid");
       this._username = "Anonymous";
     }
   }

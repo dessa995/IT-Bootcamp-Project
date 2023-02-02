@@ -20,8 +20,8 @@ class ChatUI {
     <div class="row">
     <li class="message-display col-9">
     <span class="username-message-display">${data.username}: </span>
-    <p class="message-text-content">${data.message}</p>
-    <span class="message-time-display">${this.formTime(data)}</span>
+    <span class="message-text-content">${data.message}</span>
+    <div class="message-time-display">${this.formTime(data)}</div>
     </li>
     <span class="col-3 empty">&nbsp</span>
     </div>

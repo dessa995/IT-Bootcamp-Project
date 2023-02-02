@@ -2,7 +2,7 @@ import { responsiveAccordian } from "./modules/responsiveStyling.js";
 import { Chatroom } from "./modules/classChat.js";
 import { ChatUI } from "./modules/ui.js";
 
-let chatroom = new Chatroom("#js", "Stefan");
+let chatroom = new Chatroom("#js");
 
 // chatroom.getChats((data) => {
 //   console.log(data);
@@ -45,6 +45,7 @@ btnMessageSend.addEventListener("click", function (e) {
         messageInput.disabled = false;
         messageInput.style.backgroundColor = "white";
         messageInput.style.fontWeight = "lighter";
+        messageInput.style.color = "black";
         messageInput.value = "";
         btnMessageSend.disabled = false;
       }, 2000);
