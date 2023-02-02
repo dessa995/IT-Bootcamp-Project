@@ -4,9 +4,30 @@
   box-sizing: border-box;
 }
 
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 body {
-  /* background-image: url("../images/v960-ning-31.jpg"); */
   background-image: url("../images/white-painted-wall-texture-background.jpg");
+  /* background-image: url("../images/v960-ning-31.jpg"); */
   background-size: cover;
 }
 
@@ -30,10 +51,20 @@ body {
   padding-left: 5px;
 }
 
-.nav-bar,
-.visable {
+.nav-bar {
   display: flex;
   gap: 5px;
+}
+.visable {
+  animation: slideDown 500ms ease-in forwards;
+  visibility: visible;
+  /* transition: max-height 1000mx ease; */
+}
+
+.invisable {
+  visibility: hidden;
+  max-height: 0px;
+  animation: slideUp 1000ms ease-out backwards;
 }
 
 .nav-buttons {
