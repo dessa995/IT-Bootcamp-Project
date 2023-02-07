@@ -3,6 +3,7 @@ class Chatroom {
     this.room = r;
     this.username = u;
     this.chats = db.collection("Chats");
+    this.unsub; // bice undefioned prilikom kreiranja objekta
   }
 
   //getters
@@ -25,22 +26,41 @@ class Chatroom {
     }
   }
 
+  // update sobe
+
+  updateRoom(ur) {
+    this.room = ur;
+    if (this.unsub) {
+      this.unsub();
+    }
+  }
+
+  getID() {
+    return firebase.firestore.FieldPath.documentId();
+  }
+
   set username(u) {
-    if (u == true) {
-      if (u.length > 1 && u.length < 11) {
+    if (u) {
+      if (u.trim().length > 1 && u.trim().length < 11) {
         if (u.includes(" ") == false) {
           this._username = u;
         } else {
-          alert("Username is not valid");
-          this._username = "Anonymous";
+          this.username = "Anonymous";
         }
       } else {
-        // alert("Username is not valid");
         this._username = "Anonymous";
       }
     } else {
       this._username = "Anonymous";
     }
+  }
+
+  updateUsername(udateUN) {
+    this.userName = udateUN;
+    if (this.unsub) {
+      this.unsub();
+    }
+    localStorage.setItem("username", udateUN);
   }
 
   //methods
@@ -68,14 +88,18 @@ class Chatroom {
   //pracenje poruka u bazi i ispis dodatih poruka
 
   getChats(callback) {
-    this.chats.onSnapshot((snapshot) => {
-      snapshot.docChanges().forEach((change) => {
-        if (change.type == "added") {
-          // console.log(change.doc.data());
-          callback(change.doc.data());
-        }
+    this.unsub = this.chats
+      .orderBy("createdAt", "asc")
+      .where("room", "==", this.room)
+      .onSnapshot((snapshot) => {
+        snapshot.docChanges().forEach((change) => {
+          let doc = change.doc;
+          let type = change.type;
+          if (type == "added") {
+            callback(doc);
+          }
+        });
       });
-    });
   }
 }
 

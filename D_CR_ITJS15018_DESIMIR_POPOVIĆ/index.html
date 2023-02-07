@@ -17,7 +17,7 @@
       <div class="responsive-navbar" id="show-in-responsive">
         <h4 class="main-heading-ps">Choose a chatroom</h4>
         <nav class="nav-bar row visable" id="navbar">
-          <div class="nav-buttons col-3" id="general">#General</div>
+          <div class="nav-buttons col-3" id="general">#general</div>
           <div class="nav-buttons col-3" id="js">#js</div>
           <div class="nav-buttons col-3" id="homeworks">#homework</div>
           <div class="nav-buttons col-3" id="tests">#tests</div>
@@ -29,23 +29,6 @@
           <!-- sadrzaj poruka ovde -->
         </ul>
       </section>
-
-      <div class="message-input-container row">
-        <span class="col-2 empty">&nbsp</span>
-        <input
-          class="input-area col-4"
-          type="text"
-          id="message-input"
-          placeholder="Your message"
-        />
-        <input
-          class="send-buttons col-3"
-          id="message-send-btn"
-          type="submit"
-          value="Send"
-        />
-        <span class="col-3 empty">&nbsp</span>
-      </div>
 
       <div class="username-input-container row">
         <span class="col-2 empty">&nbsp</span>
@@ -63,6 +46,42 @@
         />
         <span class="col-3 empty">&nbsp</span>
       </div>
+
+      <div class="color-pick-container row">
+        <span class="col-2 empty">&nbsp</span>
+        <input
+          type="color"
+          name="color-picker"
+          class="input-area col-4"
+          id="color-picker"
+        />
+        <input
+          class="send-buttons col-3"
+          id="color-update-btn"
+          type="submit"
+          value="Change Color"
+        />
+        <span class="col-3 empty">&nbsp</span>
+      </div>
+
+      <div class="message-input-container row">
+        <span class="col-2 empty">&nbsp</span>
+        <textarea
+          class="input-area col-4"
+          id="message-input"
+          placeholder="Your message"
+          rows="1"
+        ></textarea>
+        <input
+          class="send-buttons col-3"
+          id="message-send-btn"
+          type="submit"
+          value="Send"
+        />
+        <span class="col-3 empty">&nbsp</span>
+      </div>
+
+      <div id="show-username-div"></div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>

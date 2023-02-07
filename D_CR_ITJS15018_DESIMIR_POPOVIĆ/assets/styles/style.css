@@ -26,8 +26,11 @@
 }
 
 body {
-  background-image: url("../images/white-painted-wall-texture-background.jpg");
+  /* background-image: url("../images/white-painted-wall-texture-background.jpg"); */
   background-size: cover;
+}
+.row {
+  margin: 10px 0;
 }
 
 .main-heading {
@@ -79,8 +82,10 @@ body {
 
 .message-display {
   margin: 0px 5px;
-  display: block;
-  background-color: #087be765;
+  display: inline-block;
+  position: relative;
+  /* background-color: #087be765; */
+  background-color: #02336165;
   border-radius: 10px;
   padding: 10px;
 }
@@ -91,22 +96,54 @@ body {
   color: #100792;
 }
 
+.dots {
+  font-size: 18px;
+  font-weight: bold;
+  color: #100792;
+  margin: 0;
+  margin-left: -4px;
+  padding: 0;
+}
+
 .message-text-content {
   color: #ecf4fc;
   font-size: 18px;
 }
 
 .message-time-display {
-  display: block;
+  /* max-height: 26px; */
+  display: flex;
+  justify-content: space-between;
   color: #818181;
 }
 
-.message-input-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.delete-icon {
+  position: absolute;
+  padding: 5px;
+  bottom: 0;
+  right: 0;
+  font-size: 20px;
+  color: black;
 }
 
+.delete-icon:hover {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.userRow {
+  display: flex;
+  /* margin: 10px 0; */
+  flex-direction: row-reverse;
+}
+
+.userMessage {
+  background-color: #087be765;
+  justify-self: flex-start;
+}
+
+.message-input-container,
+.color-pick-container,
 .username-input-container {
   display: flex;
   align-items: center;
@@ -119,6 +156,10 @@ body {
   padding: 4px 0px;
   border: 1px #000000 solid;
   opacity: 0.6;
+}
+
+#color-picker {
+  padding: 0;
 }
 
 .input-area:focus {
@@ -139,4 +180,15 @@ body {
 .send-buttons:hover {
   cursor: pointer;
   background-color: #005de7;
+}
+
+#show-username-div {
+  text-align: center;
+  height: auto;
+  padding: 5px;
+}
+
+.show-username-p {
+  font-size: 25px;
+  color: #1176d4;
 }
